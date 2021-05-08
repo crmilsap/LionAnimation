@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+#lion-crown {
+  stroke-dasharray: 14289.068359375;
+  stroke-dashoffset: 14289.068359375;
+  
+  fill-opacity: 0%;
+}
+
+.crownAnimation {
+  animation: drawCrown 2s ease, crownFadeIn 2s ease-in 2s;
+
+  animation-fill-mode: forwards;
+}
+@keyframes drawCrown {
+ to {
+   stroke-dashoffset: 0;
+ } 
+}
+
+@keyframes crownFadeIn {
+  to {
+stroke-opacity: 0%;
+    fill-opacity: 100%;
+  }
+}
+
+#lion-eye {
+  animation: pullDown 5s ease-out infinite 2s;
+  -webkit-transform-origin: 40% 60%;
+  transform-origin: 40% 60%;
+  transform-box: fill-box;
+}
+
+@keyframes pullDown {
+  20%, 100% {
+    transform: scaleY(1.05);
+  }
+	0% {
+    transform: scaleY(.6);
+	}			
+
+}
